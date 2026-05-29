@@ -1,9 +1,0 @@
-apple_price = 0.75
-number_purchased = 10
-tax = 1.07
-total_bill = apple_price * number_purchased * tax
-if total_bill == 0:
-    print("Check your inputs: total bill is 0.")
-else:
-    print("Apples purchased:", number_purchased)
-    print("Total bill: $", round(total_bill, 2))
