@@ -1,0 +1,132 @@
+# Programming Activity 1
+colors = ["blue", "green", "red"]
+
+for color in colors:
+    print(color)
+
+
+# Programming Activity 2
+colors = ["blue", "green", "red"]
+
+for color in colors:
+    print("Color:", color)
+
+    for character in color:
+        print(character)
+
+
+# Programming Activity 3
+import random
+
+numbers = []
+
+for i in range(10):
+    numbers.append(random.randint(1, 100))
+
+print(numbers)
+
+
+# Programming Activity 4
+import random
+
+numbers = []
+
+for i in range(10):
+    numbers.append(random.randint(1, 100))
+
+print("List:", numbers)
+
+for i in range(len(numbers) - 1):
+    if numbers[i] % 2 == 0 and numbers[i + 1] % 2 == 0:
+        print("Two even numbers in a row:", numbers[i], numbers[i + 1])
+
+
+# Programming Activity 5
+import csv
+
+close_prices = []
+
+with open("stock_data.csv", "r") as file:
+    reader = csv.DictReader(file)
+
+    for row in reader:
+        close_prices.append(float(row["Close"]))
+
+# Average of entire dataset
+total = 0
+
+for price in close_prices:
+    total += price
+
+average = total / len(close_prices)
+
+print("Average for entire dataset:", average)
+
+# Average of first 5 days
+first_five_total = 0
+
+for i in range(5):
+    first_five_total += close_prices[i]
+
+first_five_average = first_five_total / 5
+
+print("Average for first 5 days:", first_five_average)
+
+
+# Programming Activity 5.2
+import csv
+
+# Read stock prices from file into a list of strings
+prices_strings = []
+
+with open("stock_data.csv", "r") as file:
+    reader = csv.DictReader(file)
+
+    for row in reader:
+        prices_strings.append(row["Close"])
+
+# Convert strings to floats
+prices = []
+
+for price in prices_strings:
+    prices.append(float(price))
+
+# Average of first 4 days
+first4_avg = sum(prices[:4]) / 4
+print("First 4-day average:", first4_avg)
+
+# Average of last 4 days
+last4_avg = sum(prices[-4:]) / 4
+print("Last 4-day average:", last4_avg)
+
+# Moving average trading strategy
+profit = 0
+shares_owned = False
+buy_price = 0
+
+for i in range(len(prices) - 3):
+
+    moving_avg = (
+        prices[i] +
+        prices[i + 1] +
+        prices[i + 2] +
+        prices[i + 3]
+    ) / 4
+
+    current_price = prices[i + 3]
+
+    # Buy when price is above moving average
+    if current_price > moving_avg and not shares_owned:
+        buy_price = current_price
+        shares_owned = True
+
+    # Sell when price falls below moving average
+    elif current_price < moving_avg and shares_owned:
+        profit += current_price - buy_price
+        shares_owned = False
+
+# Sell any remaining share at the end
+if shares_owned:
+    profit += prices[-1] - buy_price
+
+print("Profit from strategy:", profit)
