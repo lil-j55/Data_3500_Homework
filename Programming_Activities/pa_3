@@ -1,0 +1,55 @@
+# Programming Activity 1
+number = int(input("Enter a 3 digit number: "))
+
+first_digit = number // 100
+third_digit = number % 10
+
+if first_digit == third_digit:
+    print("palindrome!!!!")
+else:
+    print("not palindrome!")
+
+# Programming Activity 2
+denominator = 2
+total = 0
+
+for i in range(1, 1001):
+    total = total + (1 / denominator)
+    denominator = denominator * 2
+
+print("The sum is:", total)
+
+# Programming Activity 3
+age = int(input("Enter the child's age: "))
+weight = float(input("Enter the child's weight in pounds: "))
+
+age_12_or_older = age >= 12
+age_11_over_90 = (age == 11 and weight > 90)
+under_11_over_100 = (age < 11 and weight > 100)
+
+can_sit_front = age_12_or_older or age_11_over_90 or under_11_over_100
+
+if can_sit_front:
+    print("The child may sit in the front seat.")
+else:
+    print("The child may NOT sit in the front seat.")
+
+# Programming Activity 4
+def welcome_fctn(name):
+    print("Welcome", name)
+
+welcome_fctn("Jared")
+
+# Programming Activity 5
+def welcome_fctn(name):
+    welcome_message = "Welcome " + name
+    return welcome_message
+
+print(welcome_fctn("Bob"))
+
+# Programming Activity 6
+def welcome_fctn(name, age, favorite_color):
+    welcome_message = "Welcome " + name + ", you are " + str(age) + " years old, and " + favorite_color + " is your favorite color"
+    return welcome_message
+
+print(welcome_fctn("Jared", 19, "blue"))
