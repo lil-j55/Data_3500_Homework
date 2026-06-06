@@ -251,3 +251,55 @@
  423.70 
  418.45 
  391.00 
+
+   # Note: your file path below needs to match the full file path of the file your created in your environment
+
+     # You can check that your file path by right clicking on it and copying the file path
+file = open("/home/ubuntu/environment/hw4/TSLA.txt")
+
+lines = file.readlines()
+
+for line in lines:
+
+    price = float(line)
+
+    price = round(price, 2) # to round the price to 2 decimals
+
+    print(price)
+
+      # the basic logic, explained above, will look like this
+
+      # this is not the complete logic, but you are allowed to copy/paste and start with this
+ 
+
+Current_price = #the next price in the list
+
+Avg_price = #average price for the 5 previous days
+
+
+
+if current_price < average * 0.98:
+
+    #buy
+
+    #update buy variable
+
+    #update first_buy variable if this is the first time you buy
+
+elif current_price > average * 1.02:
+
+    #sell
+
+    #calculate profit of this individual trade
+
+    #keep a running total of all profit
+
+else: 
+
+    # do nothing this iteration
+ 
+
+Keep track of the first price you buy.
+Keep track of the profit each time you sell.  Print out the profit for each trade.  Keep a running total of profit from all trades.
+After the loop is complete, calculate the final_profit_percentage and print it to the console:
+    final_profit_percentage = ( total_profit / first_buy ) * 100
