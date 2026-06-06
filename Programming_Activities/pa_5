@@ -1,5 +1,4 @@
 # Programming Activity 1
-
 # Get input from the user
 name = input("Enter your name: ")
 color = input("Enter your favorite color: ")
@@ -10,9 +9,7 @@ with open("favorite_color.txt", "w") as file:
 
 print("Data has been written to favorite_color.txt")
 
-
 # Programming Activity 2
-
 import numpy as np
 
 # Create a NumPy array of 100 numbers initialized to 0
@@ -24,20 +21,14 @@ numbers = np.random.random(100)
 # Display the array
 print(numbers)
 
-
 # Programming Activity 3
-
 # Create a list of all even numbers from 2 to 100 using list comprehension
-
 even_numbers = [num for num in range(2, 101) if num % 2 == 0]
 
 print(even_numbers)
 
-
 # Programming Activity 4
-
 # Take a list of strings and remove leading/trailing spaces using list comprehension
-
 strings = ["  apple  ", " banana", "orange ", "  grape  "]
 
 cleaned_strings = [s.strip() for s in strings]
@@ -45,9 +36,7 @@ cleaned_strings = [s.strip() for s in strings]
 print("Original list:", strings)
 print("Cleaned list:", cleaned_strings)
 
-
 # Programming Activity 5
-
 # Ask the user for their name
 name = input("Enter your name: ")
 
@@ -57,9 +46,7 @@ name = name.upper()
 # Print the welcome message
 print("Welcome,", name + "!")
 
-
 # Programming Activity 6
-
 # Store the sentence in a variable
 sentence = "dude, I just biked down that mountain and at first I was like Whoa, and then I was like Whoa"
 
