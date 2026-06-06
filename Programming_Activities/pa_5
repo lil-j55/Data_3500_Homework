@@ -1,0 +1,88 @@
+# Programming Activity 1
+
+# Get input from the user
+name = input("Enter your name: ")
+color = input("Enter your favorite color: ")
+
+# Open a file and write the sentence
+with open("favorite_color.txt", "w") as file:
+    file.write(f"{name}'s favorite color is {color}")
+
+print("Data has been written to favorite_color.txt")
+
+
+# Programming Activity 2
+
+import numpy as np
+
+# Create a NumPy array of 100 numbers initialized to 0
+numbers = np.zeros(100)
+
+# Change the array values to random numbers
+numbers = np.random.random(100)
+
+# Display the array
+print(numbers)
+
+
+# Programming Activity 3
+
+# Create a list of all even numbers from 2 to 100 using list comprehension
+
+even_numbers = [num for num in range(2, 101) if num % 2 == 0]
+
+print(even_numbers)
+
+
+# Programming Activity 4
+
+# Take a list of strings and remove leading/trailing spaces using list comprehension
+
+strings = ["  apple  ", " banana", "orange ", "  grape  "]
+
+cleaned_strings = [s.strip() for s in strings]
+
+print("Original list:", strings)
+print("Cleaned list:", cleaned_strings)
+
+
+# Programming Activity 5
+
+# Ask the user for their name
+name = input("Enter your name: ")
+
+# Convert the name to all uppercase letters
+name = name.upper()
+
+# Print the welcome message
+print("Welcome,", name + "!")
+
+
+# Programming Activity 6
+
+# Store the sentence in a variable
+sentence = "dude, I just biked down that mountain and at first I was like Whoa, and then I was like Whoa"
+
+# Print the original sentence
+print(sentence)
+
+# Capitalize the first letter of the sentence
+sentence = sentence.capitalize()
+
+# Split the sentence into a list of words
+words = sentence.split()
+
+# Change the first "Whoa," to "whoa,"
+words[13] = "whoa,"
+
+# Change the second "Whoa" to "WHOA"
+words[-1] = "WHOA"
+
+# Join the words back into a sentence
+sentence = " ".join(words)
+
+# Append an exclamation point
+sentence += "!"
+
+# Print the modified sentence
+print(sentence)
