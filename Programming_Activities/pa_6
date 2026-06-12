@@ -1,5 +1,4 @@
 # Programming Activity 1
-
 # create a list with 3 favorite colors
 colors = ["blue", "white", "red"]
 
@@ -13,7 +12,6 @@ color_string = ", ".join(colors)
 print(message + color_string)
 
 # Programming Activity 2
-
 # create a variable that stores the address the user enters
 address = input("Enter your address: ")
 
@@ -27,7 +25,6 @@ else:
     print("Invalid address")
 
 # Programming Activity 3
-
 # store the variables
 num1 = int(input("Enter the first number: "))
 num2 = int(input("Enter the second number: "))
@@ -51,7 +48,6 @@ for row in table:
     print()
 
 # Programming Activity 4
-
 # Example multiplication table from Activity 3
 multiplication_table = [
     [1, 2, 3],
@@ -77,7 +73,6 @@ for key in user_data:
     print(key, ":", user_data[key])
 
 # Programming Activity 5
-
 import json
 
 # load person.json into a Python dictionary
@@ -98,7 +93,6 @@ with open("person.json", "r") as file:
 print("Verified age:", updated_person["age"])
 
 # Programming Activity 6
-
 # create two variables, inputted by the user
 num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
