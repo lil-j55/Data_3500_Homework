@@ -1,0 +1,116 @@
+# Programming Activity 1
+
+# create a list with 3 favorite colors
+colors = ["blue", "white", "red"]
+
+# create a string with value "My favorite colors are: "
+message = "My favorite colors are: "
+
+# convert list to a comma separated string using join()
+color_string = ", ".join(colors)
+
+# concatenate the two strings and print the message
+print(message + color_string)
+
+# Programming Activity 2
+
+# create a variable that stores the address the user enters
+address = input("Enter your address: ")
+
+# remove all whitespace from the string
+address_no_spaces = address.replace(" ", "")
+
+# use isalnum() to verify all remaining characters are letters or numbers
+if address_no_spaces.isalnum():
+    print("Valid address")
+else:
+    print("Invalid address")
+
+# Programming Activity 3
+
+# store the variables
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+
+# create the 2D list
+table = []
+
+# add rows and append values
+for i in range(1, num1 + 1):
+    row = []
+    for j in range(1, num2 + 1):
+        row.append(i * j)
+    table.append(row)
+
+# print the table using a nested for loop
+print("\nMultiplication Table:")
+
+for row in table:
+    for value in row:
+        print(value, end="\t")
+    print()
+
+# Programming Activity 4
+
+# Example multiplication table from Activity 3
+multiplication_table = [
+    [1, 2, 3],
+    [2, 4, 6],
+    [3, 6, 9]
+]
+
+# Ask the user for information
+age = input("Enter your age: ")
+favorite_color = input("Enter your favorite color: ")
+
+# Create the dictionary
+user_data = {
+    "age": age,
+    "favorite_color": favorite_color,
+    "multiplication_table": multiplication_table
+}
+
+# Print all values in the dictionary
+print("\nDictionary Contents:")
+
+for key in user_data:
+    print(key, ":", user_data[key])
+
+# Programming Activity 5
+
+import json
+
+# load person.json into a Python dictionary
+with open("person.json", "r") as file:
+    person = json.load(file)
+
+# increase age by 1
+person["age"] = person["age"] + 1
+
+# save the updated dictionary to person.json
+with open("person.json", "w") as file:
+    json.dump(person, file, indent=4)
+
+# open person.json again and verify the update
+with open("person.json", "r") as file:
+    updated_person = json.load(file)
+
+print("Verified age:", updated_person["age"])
+
+# Programming Activity 6
+
+# create two variables, inputted by the user
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+# attempt division
+try:
+    result = num1 / num2
+    print("Result:", result)
+
+# handle divide by zero error
+except ZeroDivisionError:
+    print("Error, attempted to divide by zero")
+
+# end program
+print("Program ended.")
