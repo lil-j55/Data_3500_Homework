@@ -1,0 +1,19 @@
+# Programming Activity 1
+
+import json
+import requests
+
+# URL containing words related to "cow"
+url = "https://api.datamuse.com/words?rel_trg=cow"
+
+# Create request
+req = requests.get(url)
+
+# Convert JSON text to Python object (list of dictionaries)
+dct1 = json.loads(req.text)
+
+# Loop through dictionaries looking for the word "cheese"
+for item in dct1:
+    if item["word"] == "cheese":
+        print(item["score"])
+        break
