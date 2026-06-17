@@ -1,0 +1,11 @@
+{
+    "highest_scoring_team": "Los Angeles Dodgers",
+    "highest_runs_per_game": 5.82,
+    "lowest_scoring_team": "Chicago White Sox",
+    "lowest_runs_per_game": 3.49,
+    "best_team": "Philadelphia Phillies",
+    "best_win_percentage": 0.641,
+    "worst_team": "Colorado Rockies",
+    "worst_win_percentage": 0.378,
+    "league_average_runs": 4.63
+}
